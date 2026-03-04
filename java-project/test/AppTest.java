@@ -55,4 +55,7 @@ public class AppTest {
         assertTrue(names.contains("tina smith"));
         assertTrue(names.contains("paul bond"));
     }
+    /**
+     * Let's shake it up a little.
+     */
 }
