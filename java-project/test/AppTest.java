@@ -38,6 +38,7 @@ public class AppTest {
         assertFalse(predicate.test("Hi"));
     }
 
+    // Yellow, black. Yellow, black. Yellow, black. Yellow, black.
     @Test
     public void testFunctionApply() {
         Function<String, String> function = new App();
