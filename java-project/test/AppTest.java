@@ -20,4 +20,12 @@ public class AppTest {
     public void setUp() {
         System.setOut(new PrintStream(outContent));
     }
+
+    @Test
+    public void testConsumerAccept() {
+        Consumer<String> consumer = new App();
+        consumer.accept("Test");
+        assertEquals("Test\n", outContent.toString());
+    }
+
 }
