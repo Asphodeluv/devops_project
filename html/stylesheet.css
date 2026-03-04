@@ -3,6 +3,10 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+p {
+    text-align: center;
+}
+
 #id {
     color: red;
 }
