@@ -38,4 +38,18 @@ public class MainTest {
         assertTrue(output.contains("Error: Division by zero is not allowed."));
     }
 
+    @Test
+    public void testInvalidOperator() {
+        String simulatedInput = "5\nx\n3\n";
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(simulatedInput.getBytes());
+        System.setIn(inputStream);
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+
+        Main.main(new String[]{});
+
+        String output = outputStream.toString();
+        assertTrue(output.contains("Error: Invalid operator."));
+    }
 }
