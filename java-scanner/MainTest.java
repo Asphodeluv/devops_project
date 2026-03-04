@@ -113,4 +113,19 @@ public class MainTest {
         assertTrue(output.contains("Result: 2000000.0"));
     }
 
+    @Test
+    public void testNegativeNumbers() {
+        String simulatedInput = "-5\n+\n-3\n";
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(simulatedInput.getBytes());
+        System.setIn(inputStream);
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+
+        Main.main(new String[]{});
+
+        String output = outputStream.toString();
+        assertTrue(output.contains("Result: -8.0"));
+    }
+
 }
