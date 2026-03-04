@@ -29,6 +29,11 @@ public final class App implements Consumer<String>, Predicate<String>,
         App app = new App();cars.stream().filter(app).map(app).forEach(app);
     }
 
+    /**
+     * List names.
+     *
+     * @return names.
+     */
     public static List<String> getNames() {
         var names = new LinkedList<String>();
         names.add("jack");
