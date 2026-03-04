@@ -98,4 +98,19 @@ public class MainTest {
         assertTrue(output.contains("Result: 3.0"));
     }
 
+    @Test
+    public void testLargeNumbers() {
+        String simulatedInput = "1000000\n+\n1000000\n";
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(simulatedInput.getBytes());
+        System.setIn(inputStream);
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+
+        Main.main(new String[]{});
+
+        String output = outputStream.toString();
+        assertTrue(output.contains("Result: 2000000.0"));
+    }
+
 }
