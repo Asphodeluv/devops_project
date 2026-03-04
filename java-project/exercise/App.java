@@ -7,7 +7,7 @@ import java.util.function.Predicate;
 import java.util.function.Function;
 
 /**
- * Exercise.
+ * THis is a class to implement functions.
  */
 public final class App implements Consumer<String>, Predicate<String>,
 Function<String, String> {
