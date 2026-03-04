@@ -83,4 +83,19 @@ public class MainTest {
         assertTrue(output.contains("Result: 42.0"));
     }
 
+    @Test
+    public void testDivisionOperation() {
+        String simulatedInput = "9\n/\n3\n";
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(simulatedInput.getBytes());
+        System.setIn(inputStream);
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+
+        Main.main(new String[]{});
+
+        String output = outputStream.toString();
+        assertTrue(output.contains("Result: 3.0"));
+    }
+
 }
